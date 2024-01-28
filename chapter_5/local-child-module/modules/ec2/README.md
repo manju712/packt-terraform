@@ -1,0 +1,1 @@
+This is the EC2 module which is used to launch the EC2 instances. 
