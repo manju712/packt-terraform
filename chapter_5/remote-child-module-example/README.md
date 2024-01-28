@@ -1,0 +1,1 @@
+This is a sample code which shows how the public module can be used to launch vpc, security group and ec2 instance. 
