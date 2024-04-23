@@ -12,7 +12,7 @@ module "ec2_instance" {
   instance_type          = "t3.micro"
   root_volume_size       = 11
   subnet_id              = "subnet-0dda5cf3303example"
-  vpc_security_group_ids = [sg-02bd1b946111111]
+  vpc_security_group_ids = [sg-02bd1b941111111]
 }
 
 This folder contains following files:
