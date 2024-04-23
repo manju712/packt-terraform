@@ -14,7 +14,7 @@ module "security_group" {
   source              = "./modules/security-group"
   vpc_id              = module.vpc.vpc_id
   security_group_name = "child-module-sg"
-  allowed_ip          = "1.1.1.1/32" # This is just an example IP
+  allowed_ip          = "1.2.3.4/32" # This is just an example IP
   from_port           = "22"
   to_port             = "22"
 }
