@@ -24,6 +24,6 @@ variable "from_port" {
 
 variable "to_port" {
   type        = string
-  description = "Port number in the SG rule"
+  description = "Indicates the last port till which the traffic has to be allowed starting from the 'from_port' " 
   default     = ""
 }

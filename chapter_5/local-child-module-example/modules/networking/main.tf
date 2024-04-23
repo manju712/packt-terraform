@@ -3,7 +3,7 @@ resource "aws_vpc" "child_module_vpc" {
   cidr_block = var.vpc_cidr_block
 
   tags = {
-    Name = "var.vpc_name"
+    Name = var.vpc_name
   }
 }
 
@@ -13,7 +13,7 @@ resource "aws_subnet" "child_module_subnet" {
   cidr_block        = var.subnet_cidr_block
   availability_zone = var.az
   tags = {
-    Name = "var.subnet_name"
+    Name = var.subnet_name
   }
 }
 
@@ -21,7 +21,7 @@ resource "aws_subnet" "child_module_subnet" {
 resource "aws_internet_gateway" "child_module_igw" {
   vpc_id = aws_vpc.child_module_vpc.id
   tags = {
-    "Name" = "var.igw_name"
+    Name = "child-internet-gateway"
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_route_table" "child_module_rt" {
   vpc_id = aws_vpc.child_module_vpc.id
 
   tags = {
-    Name = "var.route_table_name"
+    Name = "child-route-table"
   }
 }
 

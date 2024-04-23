@@ -4,7 +4,7 @@ resource "aws_security_group" "child_module_sg" {
   description = "This SG is used with the EC2 instance"
   vpc_id      = var.vpc_id
   tags = {
-    Name = "var.security_group_name"
+    Name = var.security_group_name
   }
 }
 

@@ -7,7 +7,7 @@ variable "instance_type" {
 
 variable "instance_name" {
   type        = string
-  description = "This variable is declare the name of the ec2 instance"
+  description = "This variable is used to name the ec2 instance"
   default     = "child-module-ec2"
 }
 
@@ -30,10 +30,4 @@ variable "vpc_security_group_ids" {
 variable "subnet_id" {
   type        = string
   description = "Subnet where the instance has to be launched"
-}
-
-variable "key_name" {
-  type        = string
-  description = "Name of the keypair used with EC2 instance"
-  default     = ""
 }

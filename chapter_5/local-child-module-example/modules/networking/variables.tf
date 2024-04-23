@@ -6,8 +6,14 @@ variable "vpc_cidr_block" {
 
 variable "vpc_name" {
   type        = string
-  description = "This variable is used to pass the name to vpc"
+  description = "This variable is used to pass the name to VPC"
   default     = "child-module-vpc"
+}
+
+variable "subnet_name" {
+  type        = string
+  description = "This variable is used to pass the name to subnet"
+  default     = "child-module-subnet"
 }
 
 variable "subnet_cidr_block" {
