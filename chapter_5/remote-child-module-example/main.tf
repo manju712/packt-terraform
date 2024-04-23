@@ -1,9 +1,3 @@
-### IMPORTING THE KEYPAIR GENERATED OUTSIDE OF TF USING THE SSH-KEYGEN  ###
-resource "aws_key_pair" "root_module_kp" {
-  key_name   = "root-module-kp"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCh4kZjHIeWZ13Hh4POkdt2tp8IV04A2q4ncayce0BN4wPPkxLNY8PX/ZLQU6ykl4geycahZoK0kFiLKMArEp/DDWdwjsWiz9Gx+h3Pils/3z8T3kOa7IvJPGtRZVAO0Y3u2YKNbxsYCxB5N6Ipvm94j9muNm0wZBY9xsGXszosjUcuKzxcUkgR47SNLHs8+JkjnQqa2u3j4YbbxJLb44tx/Swrqhs2DKAd54zN3nPEaaofxBrG5fzezpkRw7pgnZxaqwhsFgvnQW7rs2FIMRTPbZdddtpQin93txvdMEFkyMimf0wHtCkSFCL6cLa4BUViuGioM0Tu4X2eQrTsTfu4eakPpuekuaU+Dse71VSYIxw9c/KZH2KVyyFstrd0OcIIGc8OJCYTY8igOq4iNmY9zphfmgS2mKCGjJ6hhgVMMdaO8o5MR4RnAW9Z5xEWauipruE1t9TPFPGbdz/y/zWm2wr5mx3RrGQahBveKZlpFqxmWwHuUYaWt6spOf7BEhF6H76/QlZWo/QGpNLAQtIkjqcAoURdinT2M7NsRK3fevbjuhvASbb006DrQ8mQERS6A9wICESq6Cp1H6Ns4pJ4n1+8kKHGPleEyxYtiqJ57W5x6Zz+sHrTWGDR/2zGNqHK/I+8A/KPIIC49tSRW/6c+V0hRq0Aop4Y8x7uPWZSBQ=="
-}
-
 ###  CREATING VPC, SUBNET, ROUTE TABLE, IGW ###
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
@@ -93,7 +87,6 @@ module "ec2_instance" {
   instance_type          = "t3.micro"
   subnet_id              = module.vpc.public_subnets[0]
   vpc_security_group_ids = [module.security_group.security_group_id]
-  key_name               = aws_key_pair.root_module_kp.id
   tags = {
     Name = "public-module-ec2"
   }

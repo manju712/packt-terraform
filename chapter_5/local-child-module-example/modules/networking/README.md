@@ -14,9 +14,9 @@ module "vpc" {
 }
 
 This folder contains following files:
-main.tf      : Contains the Terraform resource block which has the code to create VPC, Subnet, IGW and route table.   
-outputs.tf   : Contains the code to display the required outputs after the resource creation. 
-variables.tf : Has all the variables which are used to customize the VPC's attributes. 
+main.tf      - Contains the Terraform resource block which has the code to create VPC, Subnet, IGW and route table.   
+outputs.tf   - Contains the code to display the required outputs after the resource creation. 
+variables.tf - Has all the variables which are used to customize the VPC's attributes. 
 
 Inputs:
 vpc_cidr_block    - This variable is used to pass CIDR block to VPC

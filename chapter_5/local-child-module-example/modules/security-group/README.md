@@ -12,9 +12,9 @@ module "security_group" {
 }
 
 This folder contains following files:
-main.tf      : Contains the Terraform resource block which has the code to create security group and security group rules.
-outputs.tf   : Contains the code to display the required outputs after the resource creation. 
-variables.tf : Has all the variables which are used to customize the security group and rule's attributes. 
+main.tf      - Contains the Terraform resource block which has the code to create security group and security group rules.
+outputs.tf   - Contains the code to display the required outputs after the resource creation. 
+variables.tf - Has all the variables which are used to customize the security group and rule's attributes. 
 
 Inputs:
 security_group_name - Name for the security group

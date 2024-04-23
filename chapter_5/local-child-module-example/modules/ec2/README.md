@@ -16,9 +16,9 @@ module "ec2_instance" {
 }
 
 This folder contains following files:
-main.tf      : Contains the Terraform resource block which has the code to launch an EC2 instance. 
-outputs.tf   : Contains the code to display the ec2 id after the instance gets launched. 
-variables.tf : Has all the variables which are used to customize the EC2 instance attributes. 
+main.tf      - Contains the Terraform resource block which has the code to launch an EC2 instance. 
+outputs.tf   - Contains the code to display the ec2 id after the instance gets launched. 
+variables.tf - Has all the variables which are used to customize the EC2 instance attributes. 
 
 Inputs:
 instance_type          - This variable is used to decide the instance type of EC2
