@@ -67,7 +67,7 @@ resource "aws_route_table" "root_module_rt" {
 /* The blank route table created in the preceding block needs to be filled with the routes which will decide how the traffic gets routed within the VPC. Here we are using a single route which routes all the traffic destined to internet(0.0.0.0/0) to go to internet gateway */
 resource "aws_route" "root_module_rt_routes" {
   route_table_id         = aws_route_table.root_module_rt.id
-  destination_cidr_block = "0.0.0.0/0"
+  destination_cidr_block = "1.2.3.4/32"
   gateway_id             = aws_internet_gateway.root_module_igw.id
 }
 
