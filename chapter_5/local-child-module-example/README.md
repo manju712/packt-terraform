@@ -5,10 +5,10 @@ the ec2 instance is only for testing and does not follow all best practices requ
 For example, there is no keypair associated to instance to avoid security concerns with this module.
 
 This folder contains following files and folders:
-modules : This folder has the child modules "networking", "security-group" and "ec2" which gets called from the root module to create the resources. 
-provider.tf : This has the code about the provider used(aws), its version(5.34.0) and the aws region(ap-south-1).
-outputs.tf : This has the code to get the output details of the resources that gets created. 
-main.tf : This is the main file where the child modules are getting called and the resources are getting created. 
+modules     - This folder has the child modules "networking", "security-group" and "ec2" which gets called from the root module to create the resources. 
+provider.tf - This has the code about the provider used(aws), its version(5.34.0) and the aws region(ap-south-1).
+outputs.tf  - This has the code to get the output details of the resources that gets created. 
+main.tf     - This is the main file where the child modules are getting called and the resources are getting created. 
 
 Usage:
 Make sure you have cloned the repository. If not, run the following command:
@@ -32,8 +32,7 @@ terraform destroy -auto-approve
 
 In this example, you will create below resources:
 A VPC with the CIDR block 10.51.0.0/16 and a subnet with CIDR block 10.51.1.0/24 is created using the local module "networking" present under the modules folder.
-A subnet with CIDR block 10.51.1.0/24. 
-A security group is created using the local module "security-group" present under the module folder. There is only one IP allowed 1.1.1.1/32 to show how to whitelist the IP. This will have to be changed to any IP you may desire to whitelist. 
+A security group is created using the local module "security-group" present under the module folder. There is only one IP allowed 1.2.3.4/32 to show how to whitelist the IP. This will have to be changed to any IP you may desire to whitelist. 
 Using the datasource, you get the latest Amazon Linux 2 AMI ID. 
 Launch an EC2 instance at the end which uses the local module "ec2" present under the modules folder.
 
@@ -41,7 +40,7 @@ Input:
 No input needs to be provided as this is just an example of local module to help you understand the concepts. There is no variables that needs external inputs. 
 
 Output:
-vpc_id : This gives the VPC ID that got created. 
-sg_id : This gives the security group id.
-ec2_id : This gives the Instance ID of the EC2 instance that is created. 
-igw_id : This gives the Internet Gateway's ID. 
+vpc_id - This gives the VPC ID that got created. 
+sg_id  - This gives the security group id.
+ec2_id - This gives the Instance ID of the EC2 instance that is created. 
+igw_id - This gives the Internet Gateway's ID. 
