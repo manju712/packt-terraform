@@ -1,4 +1,4 @@
-This is a sample code used to show how the we provision the VPC, Subnets, IGW, Route Tables using the root module.  
+This is a sample code used to show how to provision the VPC, Subnets, IGW, Route Tables using the root module.  
 In this setup, we use main.tf to launch the resources. 
 The variables and outputs are also defined accordingly. 
 
@@ -8,18 +8,18 @@ It provisions the VPC, Subnets, IGW and Route Table.
 The focus here is to show the working of the root module and the steps followed to create 
 the resources may not be production grade. 
 
-This folder contains following files and folders:
+This folder contains the following files and folders:
 main.tf          - This is the main file where the Terraform resource blocks are used to create the resources. 
 variables.tf     - This has the variables for which the user will have to pass the value either through the      ".tfvars" file or during the CLI execution or Environment variable. Here we use ".tfvars" to pass the value. 
 terraform.tfvars - This has the values for the variables defined in the variables.tf file. 
-outputs.tf       - This has the code to get the output details of the resources that gets created. 
+outputs.tf       - This has the code to get the output details of the resources that get created. 
 
 Usage:
 Make sure you have cloned the repository. If not, run the following command:
-git clone https://github.com/manju712/packt-terraform.git
+git clone https://github.com/PacktPublishing/Hashicorp-Certified-Terraform-Associate-003-Exam-guide-Second-Editon.git
 
-Navigate to the folder which has code related to local module:
-cd packt-terraform/chapter_5/root-module-example/
+Navigate to the folder that has code related to the local module:
+cd Hashicorp-Certified-Terraform-Associate-003-Exam-guide-Second-Editon/ch5/root-module-example/
 
 Initialize Terraform:
 terraform init
@@ -41,7 +41,8 @@ A route table is created with a single route 1.2.3.4/32 to show how the route ca
 
 Input:
 vpc_cidr_block     - This is the CIDR block of VPC
-subnet_cidr_block  - With this variable you supply the cidr block for the subnets
+subnet_cidr_block  - With this variable, you supply the CIDR block for the subnets
+The input is being passed in the terraform.tfvars file
 
 Output:
 vpc_id      - This gives the VPC ID that got created. 
